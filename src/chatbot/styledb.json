@@ -1,0 +1,20 @@
+{
+    "theme": {
+      "background": "#f6f6f6",
+      "fontFamily": "Helvetica Neue",
+      "headerBgColor": "#d6d3d1",
+      "headerFontColor": "#fff",
+      "headerFontSize": "15px",
+      "botBubbleColor": "#8d8986",  
+      "botFontColor": "#fff",
+      "userBubbleColor": "#fff",
+      "userFontColor": "#4a4a4a",
+      "bubbleStyle": "#be5a0e",
+      "buttonStyle": {
+        "background": "blue",
+        "color": "white",
+        "border": "none"
+      }
+    },
+    "headerImage": "path/to/header/image.png"
+  }

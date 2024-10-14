@@ -1,0 +1,167 @@
+[
+    {
+        "id": "1",
+        "message": "Hi Ajay, you have not paid Rs 45,000 on due date of 2nd Jan 2024.",
+        "trigger": "2"
+    },
+    {
+        "id": "2",
+        "message": "We request you to pay it immediately to avoid penalties.",
+        "trigger": "3"
+    },
+    {
+        "id": "3",
+        "options": [
+            {
+                "value": "paynow",
+                "label": "Pay Now",
+                "trigger": "4"
+            },
+            {
+                "value": "paylater",
+                "label": "Pay Later",
+                "trigger": "6"
+            },
+            {
+                "value": "cantpay",
+                "label": "Can't Pay",
+                "trigger": "11"
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "message": "Here is payment URL, kindly pay immediately:",
+        "trigger": "5"
+    },
+    {
+        "id": "5",
+        "component": {
+            "type": "CustomMessage",
+            "props": {
+                "customProp": "someValue",
+                "anotherProp": "anotherValue",
+                "link": "https://razorpay.com/payment-gateway/"
+            }
+        },
+        "trigger": "end-message"
+    },
+    {
+        "id": "6",
+        "message": "Which date will you pay?(dd/mm/yyyy)",
+        "trigger": "7"
+    },
+    {
+        "id": "7",
+        "message": "Kindly note that delays will increase the penalties.",
+        "trigger": "8"
+       
+    },
+    {
+        "id": "8",
+        "user": true,
+        "validator": "validatePaymentDate",
+        "trigger": "9"
+    },
+    {
+        "id": "9",
+        "message": "Thank you Ajay!",
+        "trigger": "10"
+    },
+    {
+        "id": "10",
+        "message": "Kindly remember to pay to avoid/reduce penalties.",
+        "trigger": "end-message"
+    },
+    {
+        "id": "11",
+        "message": "Please provide reason",
+        "trigger": "12"
+    },
+    {
+        "id": "12",
+        "options": [
+            {
+                "value": "Financial constraints this month",
+                "label": "1] Financial constraints this month",
+                "trigger": "13"
+            },
+            {
+                "value": "I have disputes with you",
+                "label": "2] I have disputes with you",
+                "trigger": "16"
+            },
+            {
+                "value": "I need more clarity on this EMI",
+                "label": "3] I need more clarity on this EMI",
+                "trigger": "19"
+            }
+        ]
+    },
+    {
+        "id": "13",
+        "message": "Can't you pay partially at least?",
+        "trigger": "14"
+    },
+    {
+        "id": "14",
+        "options": [
+            {
+                "value": "yes",
+                "label": "Yes",
+                "trigger": "4"
+            },
+            {
+                "value": "no",
+                "label": "No",
+                "trigger": "15"
+            }
+        ]
+    },
+    {
+        "id": "15",
+        "message": "Fine, noted, our representative will contact you shortly.",
+        "trigger": "end-message"
+    },
+    {
+        "id": "16",
+        "message": "Please enter dispute information here",
+        "trigger": "17"
+    },
+    {
+        "id": "17",
+        "user": true,
+        "validator": "validateDisputeInformation",
+        "trigger": "18"
+    },
+    {
+        "id": "18",
+        "message": "We apologise for the inconvenience, our representative will contact you shortly.",
+        "trigger": "end-message"
+    },
+    {
+        "id": "19",
+        "options": [
+            {
+                "value": "Need SOA",
+                "label": "Need SOA",
+                "trigger": "20"
+            },
+            {
+                "value": "Need agreement copy",
+                "label": "Need agreement copy",
+                "trigger": "20"
+            }
+        ]
+    },
+    {
+        "id": "20",
+        "message": "We have emailed it to your registered email id -ajay@gmail.com",
+        "trigger": "end-message"
+    },
+    {
+        "id": "end-message",
+        "message": "Thank you.",
+        "end": true
+    }
+]
