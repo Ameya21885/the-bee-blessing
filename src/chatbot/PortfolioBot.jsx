@@ -92,20 +92,45 @@ const PortfolioBot = () => {
   };
 
   // API submission function
+  // const submitDataToApi = async (apiData) => {
+  //   const apiEndpoint = "https://example.com/api";
+  //   return fetch(apiEndpoint, {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify(apiData),
+  //   })
+  //     .then((response) => response.json())
+  //     .catch((error) => {
+  //       throw error;
+  //     });
+  // };
+
   const submitDataToApi = async (apiData) => {
     const apiEndpoint = "https://example.com/api";
-    return fetch(apiEndpoint, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(apiData),
-    })
-      .then((response) => response.json())
-      .catch((error) => {
-        throw error;
+    try {
+      const response = await fetch(apiEndpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(apiData),
       });
+  
+      if (!response.ok) {
+        // Handle server errors (e.g., 4xx, 5xx status codes)
+        throw new Error(`Server Error: ${response.status} - ${response.statusText}`);
+      }
+  
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error("Error submitting data:", error.message);
+      throw error; // Re-throw the error so it can be caught in the calling function
+    }
   };
+  
 
   return (
     <div>
