@@ -152,15 +152,6 @@ const Navbar = () => {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* Desktop logo */}
-          <Avatar
-            alt="Shlok"
-            src="/assets/logo.jpg"
-            // onError={(e) => {
-            //   e.currentTarget.src = "/path/to/default-avatar.jpg";
-            // }} // Fallback avatar
-            sx={{ width: 50, height: 50 }} // You can adjust the size as needed
-          />
-          {/* <AdbIcon sx={{ mr: 1, color: "Black" }} /> */}
           <Typography
             variant="h6"
             noWrap
@@ -168,13 +159,14 @@ const Navbar = () => {
             sx={{
               mr: 2,
               fontWeight: 600,
-              letterSpacing: ".3rem",
+              letterSpacing: ".1rem",
               color: "white",
               textDecoration: "none",
               cursor: "pointer",
             }}
+            className="dancing-script"
           >
-            LOGO...
+            The-Bee-Blessing
           </Typography>
 
           {/* Desktop page links */}

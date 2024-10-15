@@ -3,6 +3,14 @@ import PortfolioBot from "../../chatbot/PortfolioBot";
 import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
 import "../globals.css";
+import { Dancing_Script } from "next/font/google";
+
+// google fonts
+const dancing_script = Dancing_Script({
+  subsets: ["latin", "latin-ext", "vietnamese"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--${string}",
+});
 
 // Load local fonts
 const geistSans = localFont({
@@ -28,7 +36,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased ${dancing_script}`}
       >
         <Navbar />
         <main>{children}</main>

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useForm } from "@formspree/react";
 import SendIcon from "@mui/icons-material/Send";
 import { Box, Button, TextField, Typography } from "@mui/material";
