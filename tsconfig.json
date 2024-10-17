@@ -1,10 +1,6 @@
 {
   "compilerOptions": {
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -26,9 +22,27 @@
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "src/app/(admin)/admin/page.jsx", "src/app/(admin)/layout.jsx", "src/app/(ecommerce)/ecommerce/page.jsx", "src/app/(ecommerce)/layout.jsx", "src/app/(portfolio)/about/page.jsx", "src/app/(portfolio)/contact/page.jsx", "src/app/(portfolio)/layout.jsx", "src/app/(portfolio)/page.jsx", "src/chatbot/PortfolioBot.jsx", "src/components/Navbar.jsx", "src/components/Footer.jsx", "src/components/TestimonialCard.jsx", "src/components/TestimonialAboutCarousel.jsx", "src/section/AboutSection.jsx", "src/components/TestimonialCarousel.jsx", "src/section/ExpertiesSection.jsx", "src/section/ContactForm.jsx", "src/section/LetsGetConnectSection.jsx", "src/section/HeroSection.jsx", "src/section/TestimonialSection.jsx"  ],
-  "exclude": [
-    "node_modules"
-  ]
+    "**/*.tsx",
+    "src/app/(admin)/admin/page.jsx",
+    "src/app/(admin)/layout.jsx",
+    "src/app/(ecommerce)/ecommerce/page.jsx",
+    "src/app/(ecommerce)/layout.jsx",
+    "src/app/(portfolio)/about/page.jsx",
+    "src/app/(portfolio)/contact/page.jsx",
+    "src/app/(portfolio)/layout.jsx",
+    "src/app/(portfolio)/page.jsx",
+    "src/chatbot/PortfolioBot.jsx",
+    "src/components/portfolio/Navbar.jsx",
+    "src/components/portfolio/Footer.jsx",
+    "src/components/portfolio/TestimonialCard.jsx",
+    "src/components/portfolio/TestimonialAboutCarousel.jsx",
+    "src/section/AboutSection.jsx",
+    "src/components/portfolio/TestimonialCarousel.jsx",
+    "src/section/ExpertiesSection.jsx",
+    "src/section/ContactForm.jsx",
+    "src/section/LetsGetConnectSection.jsx",
+    "src/section/HeroSection.jsx",
+    "src/section/TestimonialSection.jsx"
+  ],
+  "exclude": ["node_modules"]
 }

@@ -128,7 +128,7 @@ const Footer = () => {
           px: 4,
         }}
       >
-        <Typography variant="body2">© 2024 HoneyBee...</Typography>
+        <Typography variant="body2">Copyright © 2024 The Bee Blessing. All rights reserved.</Typography>
       </Box>
     </Box>
   );

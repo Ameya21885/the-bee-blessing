@@ -67,7 +67,7 @@ const ContactForm = () => {
             },
           }}
         >
-          Leave a Message
+          Schedule a Call
         </Typography>
         <Typography
           variant="subtitle2"

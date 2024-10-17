@@ -8,7 +8,7 @@ import {
   Typography,
 } from "@mui/material";
 import Image from "next/image";
-import profilePic from "../../public/assets/profile-pic.jpg";
+import profilePic from "../../../public/assets/profile-pic.jpg";
 import "./testimonialAboutCarousel.css";
 import "./testimonialCarousel.css";
 

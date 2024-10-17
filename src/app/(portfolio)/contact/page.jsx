@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
-import honeyBoy from "../../../../public/assets/honey-boy.jpg";
 import contactUs from "../../../../public/assets/cantact-us.jpg";
+import honeyBoy from "../../../../public/assets/honey-boy.jpg";
 import ContactForm from "../../../section/ContactForm";
 
 const Contact = () => {
