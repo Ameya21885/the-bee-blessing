@@ -20,9 +20,11 @@
     "embla-carousel-react": "^8.3.0",
     "formik": "^2.4.6",
     "next": "14.2.15",
+    "next-video": "^1.2.0",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.3.0",
+    "react-player": "^2.16.0",
     "react-simple-chatbot": "^0.6.1",
     "styled-components": "^6.1.13",
     "yup": "^1.4.0"

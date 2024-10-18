@@ -189,58 +189,67 @@ const BrowseCategory = () => {
 const Ads = () => {
   return (
     <Box
-      sx={{
-        border: "2px solid black",
-        padding: "5rem",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-around",
-        backgroundColor: "rgb(42,1,41)",
-        backgroundImage:
-          "linear-gradient(90deg, rgba(42,1,41,0.9725140056022409) 0%, rgba(159,47,203,1) 49%, rgba(78,0,142,0.9893207282913166) 100%)",
-      }}
-    >
-      <Box>
-        <Card
-          sx={{ maxWidth: 500, display: "flex", flexDirection: "row-reverse" }}
-        >
-          <CardMedia
-            sx={{ height: 200, width: 500 }}
-            image="https://i.pinimg.com/enabled_hi/564x/e8/d8/3b/e8d83bde5975658950f9ca2d8c2538f9.jpg"
-            title="green iguana"
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              Lizard
-            </Typography>
-            <Typography variant="body2" sx={{ color: "text.secondary" }}>
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
-            </Typography>
-          </CardContent>
-        </Card>
-      </Box>
-      <Box>
-        <Card
-          sx={{ maxWidth: 500, display: "flex", flexDirection: "row-reverse" }}
-        >
-          <CardMedia
-            sx={{ height: 200, width: 500 }}
-            image="https://i.pinimg.com/enabled_hi/564x/e8/d8/3b/e8d83bde5975658950f9ca2d8c2538f9.jpg"
-            title="green iguana"
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              Lizard
-            </Typography>
-            <Typography variant="body2" sx={{ color: "text.secondary" }}>
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
-            </Typography>
-          </CardContent>
-        </Card>
-      </Box>
+    sx={{
+      border: "2px solid black",
+      padding: { xs: "1rem", md: "5rem" }, // Adjust padding for small screens
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-around",
+      flexDirection: { xs: "column", md: "row" }, // Stack cards vertically on small screens
+      backgroundColor: "rgb(42,1,41)",
+      backgroundImage:
+        "linear-gradient(90deg, rgba(42,1,41,0.9725140056022409) 0%, rgba(159,47,203,1) 49%, rgba(78,0,142,0.9893207282913166) 100%)",
+    }}
+  >
+    <Box sx={{ marginBottom: { xs: "2rem", md: 0 } }}> {/* Space between cards on mobile */}
+      <Card
+        sx={{
+          maxWidth: { xs: 300, sm: 400, md: 500 }, // Responsive width for different screen sizes
+          display: "flex",
+          flexDirection: { xs: "column-reverse", md: "row-reverse" }, // Change layout for smaller screens
+        }}
+      >
+        <CardMedia
+          sx={{ height: 200, width: { xs: 300, sm: 400, md: 500 } }} // Adjust width for small screens
+          image="https://i.pinimg.com/enabled_hi/564x/e8/d8/3b/e8d83bde5975658950f9ca2d8c2538f9.jpg"
+          title="green iguana"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            Lizard
+          </Typography>
+          <Typography variant="body2" sx={{ color: "text.secondary" }}>
+            Lizards are a widespread group of squamate reptiles, with over
+            6,000 species, ranging across all continents except Antarctica.
+          </Typography>
+        </CardContent>
+      </Card>
     </Box>
+    <Box>
+      <Card
+        sx={{
+          maxWidth: { xs: 300, sm: 400, md: 500 },
+          display: "flex",
+          flexDirection: { xs: "column-reverse", md: "row-reverse" },
+        }}
+      >
+        <CardMedia
+          sx={{ height: 200, width: { xs: 300, sm: 400, md: 500 } }}
+          image="https://i.pinimg.com/enabled_hi/564x/e8/d8/3b/e8d83bde5975658950f9ca2d8c2538f9.jpg"
+          title="green iguana"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            Lizard
+          </Typography>
+          <Typography variant="body2" sx={{ color: "text.secondary" }}>
+            Lizards are a widespread group of squamate reptiles, with over
+            6,000 species, ranging across all continents except Antarctica.
+          </Typography>
+        </CardContent>
+      </Card>
+    </Box>
+  </Box>
   );
 };
 
@@ -324,7 +333,7 @@ const BestSeller = () => {
     <Box sx={{ border: "2px solid black", padding: "3rem" }}>
       <Box>
         <Typography variant="h4" component="h2" gutterBottom>
-        Best Seller
+          Best Seller
         </Typography>
       </Box>
       <Box sx={{ flexGrow: 1 }}>
@@ -352,7 +361,7 @@ const Home = () => {
       <Ads />
       <DeliverToYou />
       <MostViewedSection />
-      <BestSeller/>
+      <BestSeller />
       <DeliverToYou />
       Ecommerce
     </div>

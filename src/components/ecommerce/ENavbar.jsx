@@ -62,20 +62,32 @@ const InformationBox = () => {
 const pages = [
   {
     id: 1,
-    title: "Product",
-    link: "/",
+    title: "Home",
+    link: "/ecommerce/",
     icon: <HomeIcon />,
   },
   {
     id: 2,
-    title: "Cart",
-    link: "/cart",
+    title: "About",
+    link: "/ecommerce/about",
     icon: <InfoIcon />,
   },
   {
     id: 3,
+    title: "Our Process",
+    link: "/ecommerce/our-process",
+    icon: <ContactMailIcon />,
+  },
+  {
+    id: 4,
+    title: "Products",
+    link: "/ecommerce/products",
+    icon: <ContactMailIcon />,
+  },
+  {
+    id: 5,
     title: "Contact",
-    link: "/contact",
+    link: "/ecommerce/contact",
     icon: <ContactMailIcon />,
   },
 ];
@@ -240,7 +252,7 @@ const ENavbar = () => {
               open={open}
               onClose={toggleDrawer(false)}
               anchor="right"
-              PaperProps={{ sx: { width: "100%" } }}
+              PaperProps={{ sx: { width: "100%", overflowX: "hidden"  } }}
             >
               {DrawerList}
             </Drawer>
