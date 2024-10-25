@@ -153,7 +153,6 @@ const ListOfProducts = () => {
   return (
     <Box>
       <h4>List of products</h4>
-
       <ListOfProductGrid />
     </Box>
   );
