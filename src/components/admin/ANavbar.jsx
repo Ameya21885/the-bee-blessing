@@ -125,13 +125,13 @@ const ANavbar = ({ children }) => {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar position="fixed">
+      <AppBar position="fixed" sx={{ backgroundColor: 'black' }}>
         <Toolbar>
           <IconButton color="inherit" aria-label="open drawer" onClick={handleDrawerToggle} edge="start">
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            Admin Dashboard
+            The-Bee-Blessing&apos;s
           </Typography>
         </Toolbar>
       </AppBar>
@@ -149,15 +149,14 @@ const ANavbar = ({ children }) => {
                 <ListItemButton
                   onClick={() => (subItems ? toggleSubmenu(text) : null)}
                   sx={{
-                    justifyContent: open ? "initial" : "center",
+                    justifyContent: "flex-start",
                     px: 2.5,
                   }}
                 >
                   <ListItemIcon
                     sx={{
-                      minWidth: 0,
-                      mr: open ? 3 : "auto",
-                      justifyContent: "center",
+                      minWidth: 40, // Ensures icon alignment
+                      mr: open ? 2 : 0,
                     }}
                   >
                     {icon}
@@ -174,14 +173,12 @@ const ANavbar = ({ children }) => {
                         key={subText}
                         sx={{
                           pl: open ? 4 : 2,
-                          justifyContent: open ? "initial" : "center",
+                          justifyContent: "flex-start",
                         }}
                       >
                         <ListItemIcon
                           sx={{
-                            minWidth: 0,
-                            mr: open ? 3 : "auto",
-                            justifyContent: "center",
+                            minWidth: 40,
                           }}
                         >
                           {subIcon}
@@ -202,6 +199,7 @@ const ANavbar = ({ children }) => {
       <Box
         component="main"
         sx={{
+          backgroundColor: '#F6F8FA',
           flexGrow: 1,
           p: 3,
           width: open ? `calc(100% - ${drawerWidth}px)` : `calc(100% - ${theme.spacing(8) + 1}px)`,
