@@ -199,6 +199,7 @@ const ANavbar = ({ children }) => {
       <Box
         component="main"
         sx={{
+          border:'2px solid black',
           backgroundColor: '#F6F8FA',
           flexGrow: 1,
           p: 3,
