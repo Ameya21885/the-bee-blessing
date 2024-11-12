@@ -566,7 +566,6 @@ const data = [
 ];
 // user-details
 const UserDetailsTable = () => {
-
   const getStatusStyles = (status) => {
     switch (status) {
       case "Complete":
@@ -582,14 +581,18 @@ const UserDetailsTable = () => {
     }
   };
 
-  const columns = useMemo (
+  const columns = useMemo(
     () => [
       {
         accessorKey: "profileImage",
         header: "Profile",
         size: 50,
         Cell: ({ cell }) => (
-          <Avatar src={cell.getValue()} alt="Profile" sx={{ width: 40, height: 40 }} />
+          <Avatar
+            src={cell.getValue()}
+            alt="Profile"
+            sx={{ width: 40, height: 40 }}
+          />
         ),
       },
       {
