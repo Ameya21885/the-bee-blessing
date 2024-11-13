@@ -75,59 +75,59 @@ const iconMap = {
 
 const data = [
   {
-    "profileImage": "https://randomuser.me/api/portraits/men/1.jpg",
-    "name": "Smartphone X",
-    "category": "Electronics",
-    "stock": true,
-    "price": 1200,
-    "quantity": 50,
-    "status": "Complete"
+    profileImage: "https://randomuser.me/api/portraits/men/1.jpg",
+    name: "Smartphone X",
+    category: "Electronics",
+    stock: true,
+    price: 1200,
+    quantity: 50,
+    status: "Complete",
   },
   {
-    "profileImage": "https://randomuser.me/api/portraits/women/2.jpg",
-    "name": "Laptop Pro",
-    "category": "Computers",
-    "stock": false,
-    "price": 2500,
-    "quantity": 20,
-    "status": "Pending"
+    profileImage: "https://randomuser.me/api/portraits/women/2.jpg",
+    name: "Laptop Pro",
+    category: "Computers",
+    stock: false,
+    price: 2500,
+    quantity: 20,
+    status: "Pending",
   },
   {
-    "profileImage": "https://randomuser.me/api/portraits/men/3.jpg",
-    "name": "Wireless Earbuds",
-    "category": "Accessories",
-    "stock": true,
-    "price": 150,
-    "quantity": 100,
-    "status": "In Progress"
+    profileImage: "https://randomuser.me/api/portraits/men/3.jpg",
+    name: "Wireless Earbuds",
+    category: "Accessories",
+    stock: true,
+    price: 150,
+    quantity: 100,
+    status: "In Progress",
   },
   {
-    "profileImage": "https://randomuser.me/api/portraits/women/4.jpg",
-    "name": "Smartwatch Z",
-    "category": "Wearables",
-    "stock": true,
-    "price": 300,
-    "quantity": 70,
-    "status": "Rejected"
+    profileImage: "https://randomuser.me/api/portraits/women/4.jpg",
+    name: "Smartwatch Z",
+    category: "Wearables",
+    stock: true,
+    price: 300,
+    quantity: 70,
+    status: "Rejected",
   },
   {
-    "profileImage": "https://randomuser.me/api/portraits/men/5.jpg",
-    "name": "4K LED TV",
-    "category": "Electronics",
-    "stock": true,
-    "price": 500,
-    "quantity": 15,
-    "status": "Complete"
+    profileImage: "https://randomuser.me/api/portraits/men/5.jpg",
+    name: "4K LED TV",
+    category: "Electronics",
+    stock: true,
+    price: 500,
+    quantity: 15,
+    status: "Complete",
   },
   {
-    "profileImage": "https://randomuser.me/api/portraits/women/6.jpg",
-    "name": "Bluetooth Speaker",
-    "category": "Audio",
-    "stock": false,
-    "price": 120,
-    "quantity": 45,
-    "status": "Pending"
-  }
+    profileImage: "https://randomuser.me/api/portraits/women/6.jpg",
+    name: "Bluetooth Speaker",
+    category: "Audio",
+    stock: false,
+    price: 120,
+    quantity: 45,
+    status: "Pending",
+  },
 ];
 
 const ListOfProduct = () => {
@@ -164,7 +164,11 @@ const ListOfProduct = () => {
         size: 200,
         Cell: ({ row }) => (
           <Box sx={{ display: "flex", alignItems: "center" }}>
-            <Avatar src={row.original.profileImage} alt="Product Image" sx={{ mr: 2 }} />
+            <Avatar
+              src={row.original.profileImage}
+              alt="Product Image"
+              sx={{ mr: 2 }}
+            />
             <Typography>{row.original.name}</Typography>
           </Box>
         ),
@@ -230,14 +234,37 @@ const ListOfProduct = () => {
     []
   );
 
-
   const table = useMaterialReactTable({
     columns,
     data,
     renderTopToolbarCustomActions: ({ table }) => (
-      <Button variant="contained" startIcon={<IoIosAdd />}>
-        Add Product
-      </Button>
+      <Box
+        sx={{
+          marginBottom: "10px",
+        }}
+      >
+        <Box>
+          <FilterSection />
+        </Box>
+        <Box>
+          <Button
+            variant="contained"
+            startIcon={<IoIosAdd />}
+            sx={{
+              marginLeft: "1rem",
+              padding: "8px 16px",
+              fontWeight: "bold",
+              color: "white",
+              backgroundColor: "#1976d2", // Customize button color
+              "&:hover": {
+                backgroundColor: "#1565c0", // Darker shade on hover
+              },
+            }}
+          >
+            Add Product
+          </Button>
+        </Box>
+      </Box>
     ),
   });
 
@@ -257,7 +284,6 @@ const ListOfProduct = () => {
     />
   );
 };
-
 
 const DetailCard = ({ card }) => {
   const { title, currency, amount, orders, percentageChange, icon } = card;
@@ -307,23 +333,15 @@ const DetailCard = ({ card }) => {
 };
 
 const SelectStatus = [
-  { title: "Scheduled"},
-  { title: "Publish"},
-  { title: "Inactive"},
-  { title: "Pulp Fiction"},
+  { title: "Scheduled" },
+  { title: "Publish" },
+  { title: "Inactive" },
+  { title: "Pulp Fiction" },
 ];
 
-const Category = [
-  { name: "A" },
-  { name: "B" },
-  { name: "C" },
-  { name: "D" },
-];
+const Category = [{ name: "A" }, { name: "B" }, { name: "C" }, { name: "D" }];
 
-const Stock = [
-  { genre: "Out Of Stock" },
-  { genre: "In Stock" }
-];
+const Stock = [{ genre: "Out Of Stock" }, { genre: "In Stock" }];
 
 const FilterAutocomplete = ({ label, options, getOptionLabel }) => (
   <Autocomplete
@@ -339,7 +357,7 @@ const FilterAutocomplete = ({ label, options, getOptionLabel }) => (
 
 const FilterSection = () => {
   return (
-    <Card sx={{ padding: 2 }}>
+    <Box sx={{ padding: 2, width: "35rem" }}>
       <Typography variant="h6" sx={{ mb: 2 }}>
         Filter
       </Typography>
@@ -368,7 +386,7 @@ const FilterSection = () => {
           </Grid>
         </Grid>
       </Box>
-    </Card>
+    </Box>
   );
 };
 const ProductList = () => {
@@ -380,7 +398,6 @@ const ProductList = () => {
         ))}
       </Box>
       <Box>
-        <FilterSection />
         <ListOfProduct />
       </Box>
     </>
