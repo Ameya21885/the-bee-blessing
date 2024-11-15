@@ -237,6 +237,7 @@ const ListOfProduct = () => {
   const table = useMaterialReactTable({
     columns,
     data,
+    initialState: { columnVisibility: { edit: false } },
     renderTopToolbarCustomActions: ({ table }) => (
       <Box
         sx={{
