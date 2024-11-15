@@ -65,7 +65,10 @@ const Heading = () => {
     >
       <Box>
         <Typography variant="h5" component="div">
-          Add a new Product
+          Edit Product
+        </Typography>
+        <Typography sx={{ color: "text.secondary", mb: 1.5 }}>
+         First Auto Filling all the details first and saving the edited part
         </Typography>
         <Typography sx={{ color: "text.secondary", mb: 1.5 }}>
           Orders placed across your store
@@ -922,45 +925,45 @@ const ProductOrganize = () => {
   );
 };
 
-const AddProduct = () => {
+const EditProduct = () => {
   return (
     <>
-      <Heading />
+    <Heading />
+    <Box
+      sx={{
+        width: "100%",
+        display: "flex",
+        justifyContent: "center",
+        gap: "1rem",
+      }}
+    >
       <Box
         sx={{
-          width: "100%",
+          width: "70%",
           display: "flex",
-          justifyContent: "center",
+          flexDirection: "column",
           gap: "1rem",
         }}
       >
-        <Box
-          sx={{
-            width: "70%",
-            display: "flex",
-            flexDirection: "column",
-            gap: "1rem",
-          }}
-        >
-          <ProductInformation />
-          <ProductImage />
-          <ProductVariants />
-          <ProductInventory />
-        </Box>
-        <Box
-          sx={{
-            width: "30%",
-            display: "flex",
-            flexDirection: "column",
-            gap: "1rem",
-          }}
-        >
-          <ProductPricing />
-          <ProductOrganize />
-        </Box>
+        <ProductInformation />
+        <ProductImage />
+        <ProductVariants />
+        <ProductInventory />
       </Box>
-    </>
-  );
-};
+      <Box
+        sx={{
+          width: "30%",
+          display: "flex",
+          flexDirection: "column",
+          gap: "1rem",
+        }}
+      >
+        <ProductPricing />
+        <ProductOrganize />
+      </Box>
+    </Box>
+  </>
+  )
+}
 
-export default AddProduct;
+export default EditProduct
