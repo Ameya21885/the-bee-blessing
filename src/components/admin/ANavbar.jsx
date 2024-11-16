@@ -84,9 +84,10 @@ const menuItems = [
     text: "Product",
     icon: <ProductIcon />,
     subItems: [
+      { text: "Product List", icon: <ListIcon /> },
       { text: "Add Product", icon: <AddIcon /> },
       { text: "Edit Product", icon: <EditIcon /> },
-      { text: "Product List", icon: <ListIcon /> },
+      { text: "Category List", icon: <ListIcon /> },
     ],
   },
   {
